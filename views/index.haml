@@ -2,10 +2,12 @@
 	.column.span-6
 		%h1
 			.words
-				.word Two
-				.word Thousand
-				.word Eleven
-			.number 2011
+				- @year.en.numwords.split(' ').each do |word|
+					.word
+						- unless word == 'and'
+							= word.capitalize
+			.number
+				= @year
 	.column.span-18.last
 		%ol
 			- today = Date.today
