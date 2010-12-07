@@ -26,6 +26,8 @@ body
 		.number
 			color: #000
 	ol
+		margin-bottom: 25px
+		margin-right: 0
 		li
 			border-top: 2px solid #000
 			margin-bottom: 10px
@@ -33,7 +35,7 @@ body
 				border-top-color: #bb450b
 			dl
 				position: relative
-				padding-left: 50px
+				padding-left: 70px
 				line-height: 30px
 				dt
 					position: absolute
@@ -82,7 +84,23 @@ body
 					&.row-2 span.overlay
 						top: auto
 						bottom: -20px !important
-						
+	.navigation
+		padding-top: 10px
+		font-size: 20px
+		.prev
+			text-align: left
+		.next
+			text-align: right
+		.content
+			text-align: center
+			font-size: 14px
+			line-height: 20px
+		a
+			color: #000
+			text-decoration: none
+			border-bottom: 1px dotted #333
+			&:hover, &:active, &:focus
+				border-bottom: 2px solid #000
 #footer
 	display: none
 	text-align: center
