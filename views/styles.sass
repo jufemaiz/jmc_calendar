@@ -12,19 +12,25 @@ body
 #content
 	padding: 50px 0
 	h1
-		margin-top: 50px
+		margin-top: 150px
 		font-weight: bold
 		color: #000
+		font-size: 50px
+		letter-spacing: -2px
 		.words
 			color: #fff
 			text-shadow: #ccc 0 0 1px
+			margin-bottom: 75px
+			.word
+				margin-bottom: 10px
 		.number
-			margin-top: 25px
 			color: #000
 	ol
 		li
 			border-top: 2px solid #000
 			margin-bottom: 10px
+			&.past
+				border-top-color: #bb450b
 			dl
 				position: relative
 				padding-left: 50px
@@ -35,6 +41,10 @@ body
 					left: 0
 					width: 100%
 					border-bottom: 1px solid #000
+					&.past
+						border-bottom-color: #bb450b
+						opacity: 0.25
+						color: #000
 				dd
 					margin: 0
 					display: inline-block 
@@ -48,26 +58,28 @@ body
 					&.fifteen
 						margin-right: 16px
 					&.past
-						opacity: 1
+						opacity: 0.25
+						color: #000
+					&.current
+						font-weight: bold
 						span.overlay
 							display: block
-					&.current
-						font-size: 20px
 					&.future
 						opacity: 1
 					span.overlay
 						position: absolute
-						top: 0
-						left: 0
+						top: -25px
+						right: -2px
 						width: 25px
 						padding: 0 5px
-						color: red
 						font-weight: bold
 						height: 100%
 						display: none
 						opacity: 1
-						text-shadow: #000 1px 1px 1px
-						
+						font-size: 40px
+					&.row-2 span.overlay
+						top: auto
+						bottom: -20px !important
 						
 #footer
 	display: none

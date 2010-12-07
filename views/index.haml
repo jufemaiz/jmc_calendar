@@ -23,15 +23,16 @@
 			- today = Date.today
 			- d = Date.parse("#{@year}-01-01")
 			- for month_number in 1..12
-				- d = Date.parse("#{@year}-#{month_number}-01")
-				%li
+				- last_day = Date.parse("#{@year+1}-01-01")
+				- last_day = Date.parse("#{@year}-#{month_number + 1}-01") if month_number < 12
+				%li{:class => " month #{'past' if last_day < today } #{'current' if last_day == today } #{'future' if last_day >  today }" }
 					%dl
-						%dt
-							= d.strftime('%B')
+						%dt{:class => " month #{'past' if last_day <  today } #{'current' if last_day == today } #{'future' if last_day >  today }" }
+							= Date.parse("#{@year}-#{month_number}-01").strftime('%B')
 						- # While this is the same month
 						- for day in 1..(Date.new(@year,12,31)<<(12-month_number)).day
 							- d = Date.parse("#{@year}-#{month_number}-#{day}")
-							%dd{:class => " day #{'past' if d < today} #{'current' if d == today} #{'future' if d > today} commercial-day-#{d.cwday} #{ 'fifteen' if day == 15 }", :title => d.strftime }
+							%dd{:class => " day #{'past' if d < today } #{'current' if d == today } #{'future' if d > today } commercial-day-#{d.cwday} #{ 'fifteen' if day == 15 } #{'row-1' if day <= 15} #{'row-2' if day > 15}", :title => d.strftime }
 								= d.strftime('%e')
-								%span.overlay X
+								%span.overlay &middot;
 						
