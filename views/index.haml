@@ -38,18 +38,18 @@
 								= d.strftime('%e')
 								%span.overlay &middot;
 		.navigation
-			.column.span-4
+			.column.span-3
 				.prev
 					%a{ :href => "/#{@year-1}"}
 						= "&larr; #{@year-1}"
-			.coumn.span-10
+			.coumn.span-12
 				.content
 					A collaboration between
 					%a{ :href => "/" } Stephen Pecoraro
 					and
 					%a{ :href => "http://euphemize.net/" } Joel Courtney
 					\.
-			.column.span-4.last
+			.column.span-3.last
 				.next
 					%a{ :href => "/#{@year+1}"}
 						= "#{@year+1} &rarr;"
