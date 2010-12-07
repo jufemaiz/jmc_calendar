@@ -2,10 +2,20 @@
 	.column.span-6
 		%h1
 			.words
-				- @year.en.numwords.split(' ').each do |word|
-					.word
-						- unless word == 'and'
-							= word.capitalize
+				- if @year >= 1000 && @year < 2000
+					- @year.to_s.rjust(4,'0')[0..1].to_i.en.numwords.split(' ').each do |word|
+						.word
+							- unless word == 'and'
+								= word.capitalize
+					- @year.to_s.rjust(4,'0')[2..3].to_i.en.numwords.split(' ').each do |word|
+						.word
+							- unless word == 'and'
+								= word.capitalize
+				- else
+					- @year.en.numwords.split(' ').each do |word|
+						.word
+							- unless word == 'and'
+								= word.capitalize
 			.number
 				= @year
 	.column.span-18.last
