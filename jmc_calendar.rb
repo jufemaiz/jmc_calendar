@@ -1,7 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-require 'open-uri'
-require 'json'
 
 require 'haml'
   set :haml, :format => :html5
