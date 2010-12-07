@@ -1,0 +1,34 @@
+!!!
+%html(lang="en-GB" dir="ltr")
+	%head
+		%title
+			= "#{@year} Calendar"
+		
+		%meta(http-equiv="content-type" content="html/text; charset=utf-8")
+		%meta{:charset => 'utf-8'}
+		%meta(name="MSSmartTagsPreventParsing" content="true")
+		%meta(name="robots" content="noindex, nofollow")
+		%meta(name="description" content="A cute little calendar")
+		%meta(name="keywords" content="2011 Calendar")
+		%meta(name="author" content="Joel Courtney, http://euphemize.net")
+		
+		%link{ :type => 'text/css', :rel => 'stylesheet', :media => 'screen,handheld,projection', :title => 'standard', :href => '/css/blueprint/screen.css' }
+		%link{ :type => 'text/css', :rel => 'stylesheet', :media => 'screen,handheld,projection', :title => 'standard', :href => '/css/styles.css' }
+
+		%script{ :type => "text/javascript", :src => "/js/jquery/jquery.min.js" }
+
+		%script{ :type => "text/javascript", :src => "/js/test.coffee.js"}
+
+		%body.home
+
+			<!-- Header -->
+			#header
+				#branding
+					.container
+			<!-- Content -->
+			#content
+				= yield
+			<!-- Footer -->
+			#footer
+				.container
+					&copy 2010 Joel Courtney 

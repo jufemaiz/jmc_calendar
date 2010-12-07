@@ -1,0 +1,74 @@
+body
+	margin: 0
+	padding: 0
+	position: relative
+	font-family: Helvetica, Arial, sans-serif
+	background: #f95c0f
+	color: #000
+	height: 100%
+	font-size: 80%
+
+#header
+#content
+	padding: 50px 0
+	h1
+		margin-top: 50px
+		font-weight: bold
+		color: #000
+		.words
+			color: #fff
+			text-shadow: #ccc 0 0 1px
+		.number
+			margin-top: 25px
+			color: #000
+	ol
+		li
+			border-top: 2px solid #000
+			margin-bottom: 10px
+			dl
+				position: relative
+				padding-left: 50px
+				line-height: 30px
+				dt
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					border-bottom: 1px solid #000
+				dd
+					margin: 0
+					display: inline-block 
+					width: 25px
+					padding: 0 5px
+					text-align: right
+					position: relative
+					&.commercial-day-6, &.commercial-day-7
+						color: #fff
+						font-weight: bold
+					&.fifteen
+						margin-right: 16px
+					&.past
+						opacity: 1
+						span.overlay
+							display: block
+					&.current
+						font-size: 20px
+					&.future
+						opacity: 1
+					span.overlay
+						position: absolute
+						top: 0
+						left: 0
+						width: 25px
+						padding: 0 5px
+						color: red
+						font-weight: bold
+						height: 100%
+						display: none
+						opacity: 1
+						text-shadow: #000 1px 1px 1px
+						
+						
+#footer
+	text-align: center
+	padding: 20px
