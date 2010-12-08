@@ -31,11 +31,22 @@ body
 	ol
 		margin-bottom: 25px
 		margin-right: 0
+		position: relative
+		list-style: none
 		li
 			border-top: 2px solid #000
 			margin-bottom: 10px
+			&:before
+				content: counter(item)
+				counter-increment: item
+				display: block
+				position: absolute
+				left: -5px
+				padding-top: 5px
 			&.past
 				border-top-color: #bb450b
+				&:before
+					color: #bb450b
 			dl
 				position: relative
 				padding-left: 70px
