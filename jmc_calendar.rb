@@ -13,6 +13,7 @@ Linguistics::use( :en )
 # Index - default year is 2011
 # ----------------------------------
 get '/' do
+  params[:tz] ||= 0
   @today = Date.today
   @year = @today.year
   @start = @today

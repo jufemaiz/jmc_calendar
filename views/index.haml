@@ -26,7 +26,7 @@
 			- while ( day >= @start && day < @end )
 				- last_day = Date.new(day.year, day.month, (Date.new(day.year,12,31)<<(12-day.month)).day)
 				- if day.day == 1
-					%li{ :class => " month #{'past' if ( last_day < @today ) } #{'current' if last_day == @today } #{'future' if last_day > @today }", :style => "#{ 'counter-reset: item 0' if day.year != @start.year}" }
+					%li{ :class => " month #{'past' if ( last_day < @today ) } #{'current' if last_day == @today } #{'future' if last_day > @today }", :style => "#{ 'counter-reset: item 0' if day.year != @start.year && day.month == 1 }" }
 						%dl
 							%dt{:class => " month #{'past' if last_day <  @today } #{'current' if last_day == @today } #{'future' if last_day > @today }" }
 								= day.strftime('%B')
