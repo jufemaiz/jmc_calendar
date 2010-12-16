@@ -10,10 +10,13 @@ require 'linguistics'
 Linguistics::use( :en )
 
 # ----------------------------------
-# Index - default year is 2011
+# Index - This uses the current date
 # ----------------------------------
 get '/' do
+  # TODO: use of GMT over server timezone; Localised timezone support
   params[:tz] ||= 0
+  # /TODO
+
   @today = Date.today
   @year = @today.year
   @start = @today
@@ -29,7 +32,13 @@ get '/' do
   haml :index
 end
 
+# ----------------------------------
+# Year - calendar for a particular year
+# ----------------------------------
 get %r{/(\d+)$} do
+  # TODO: use of GMT over server timezone; Localised timezone support
+  params[:tz] ||= 0
+  # /TODO
   @year = params[:captures][0].to_i
   haml :annual
 end
