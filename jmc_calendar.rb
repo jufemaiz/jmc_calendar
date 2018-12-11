@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'sinatra'
 
 require 'haml'
-  set :haml, format: :html5
 require 'sass'
 require 'coffee-script'
 
 require 'linguistics'
-Linguistics::use( :en )
+
+set :haml, format: :html5
+Linguistics.use(:en)
 
 # ----------------------------------
 # Index - This uses the current date
@@ -22,12 +25,12 @@ get '/' do
   @start = @today
   # Manage start and end of calendar
   # Start
-  if @today.month == 1
-    @start = Date.new(@today.year - 1,12,1)
-  else
-    @start = Date.new(@today.year,@today.month-1,1)
-  end
-  @end = @start>>(12)
+  @start = if @today.month == 1
+             Date.new(@today.year - 1, 12, 1)
+           else
+             Date.new(@today.year, @today.month - 1, 1)
+           end
+  @end = @start >> 12
 
   haml :index
 end

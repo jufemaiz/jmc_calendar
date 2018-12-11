@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ruby '2.5.3'
 
 source 'https://rubygems.org' do
@@ -7,4 +9,8 @@ source 'https://rubygems.org' do
   gem 'rack'
   gem 'sass'
   gem 'sinatra'
+
+  group :development do
+    gem 'rubocop'
+  end
 end
