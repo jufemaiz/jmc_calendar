@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 
 require 'haml'
-  set :haml, :format => :html5
+  set :haml, format: :html5
 require 'sass'
 require 'coffee-script'
 
@@ -28,14 +28,14 @@ get '/' do
     @start = Date.new(@today.year,@today.month-1,1)
   end
   @end = @start>>(12)
-  
+
   haml :index
 end
 
 # ----------------------------------
 # Year - calendar for a particular year
 # ----------------------------------
-get %r{/(\d+)$} do
+get %r{\/(\d+)} do
   # TODO: use of GMT over server timezone; Localised timezone support
   params[:tz] ||= 0
   # /TODO

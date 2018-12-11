@@ -21,18 +21,18 @@
 		.hidden
 			= @year
 	.column.span-18.last
-		%ol{ :style => "counter-reset: item #{@start.month - 1}" }
+			%ol{ style: "counter-reset: item #{@start.month - 1}" }
 			- day = @start
 			- while ( day >= @start && day < @end )
 				- last_day = Date.new(day.year, day.month, (Date.new(day.year,12,31)<<(12-day.month)).day)
 				- if day.day == 1
-					%li{ :class => " month #{'past' if ( last_day < @today ) } #{'current' if last_day == @today } #{'future' if last_day > @today }", :style => "#{ 'counter-reset: item 0' if day.year != @start.year && day.month == 1 }" }
+					%li{ class: " month #{'past' if ( last_day < @today ) } #{'current' if last_day == @today } #{'future' if last_day > @today }", style: "#{ 'counter-reset: item 0' if day.year != @start.year && day.month == 1 }" }
 						%dl
-							%dt{:class => " month #{'past' if last_day <  @today } #{'current' if last_day == @today } #{'future' if last_day > @today }" }
+							%dt{class: " month #{'past' if last_day <  @today } #{'current' if last_day == @today } #{'future' if last_day > @today }" }
 								= day.strftime('%B')
 							- while ( day <= last_day )
 								- # While this is the same month
-								%dd{:class => " day #{'past' if day < @today } #{'current' if day == @today } #{'future' if day > @today } commercial-day-#{day.cwday} #{ 'fifteen' if day.day == 15 } #{'row-1' if day.day <= 15} #{'row-2' if day.day > 15}", :title => day.strftime }
+								%dd{class: " day #{'past' if day < @today } #{'current' if day == @today } #{'future' if day > @today } commercial-day-#{day.cwday} #{ 'fifteen' if day.day == 15 } #{'row-1' if day.day <= 15} #{'row-2' if day.day > 15}", title: day.strftime }
 									= day.strftime('%e')
 									%span.overlay &middot;
 								- day = day.next()
@@ -40,16 +40,16 @@
 		.navigation
 			.column.span-3
 				.prev
-					%a{ :href => "/#{@year}"}
+					%a{ href: "/#{@year}"}
 						= "&larr; #{@year}"
 			.coumn.span-12
 				.content
 					A collaboration between
-					%a{ :href => "http://pecorarodesign.com/" } Stephen Pecoraro
+					%a{ href: "https://www.behance.net/specoraro" } Stephen Pecoraro
 					and
-					%a{ :href => "http://euphemize.net/" } Joel Courtney
+					%a{ href: "https://github.com/jufemaiz" } Joel Courtney
 					\.
 			.column.span-3.last
 				.next
-					%a{ :href => "/#{@year+1}"}
+					%a{ href: "/#{@year+1}"}
 						= "#{@year+1} &rarr;"
