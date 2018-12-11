@@ -6,6 +6,7 @@ source 'https://rubygems.org' do
   gem 'coffee-script'
   gem 'haml'
   gem 'linguistics'
+  gem 'puma'
   gem 'rack'
   gem 'sass'
   gem 'sinatra'
