@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ruby '2.5.3'
+ruby '2.6.1'
 
 source 'https://rubygems.org' do
   gem 'coffee-script'
@@ -12,6 +12,8 @@ source 'https://rubygems.org' do
   gem 'sinatra'
 
   group :development do
+    gem 'haml_lint', require: false
+    gem 'rerun'
     gem 'rubocop'
   end
 end

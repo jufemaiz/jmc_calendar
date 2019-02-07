@@ -1,124 +1,207 @@
+$font-family: Helvetica, Arial, sans-serif
+$black: #000
+$white: #fff
+$dark-grey: #333
+$light-grey: #ccc
+$orange: #f95c0f
+$burnt-orange: #bb450b
+
 body
+  background: $orange
+  color: $black
+  font-family: $font-family
+  font-size: 80%
+  height: 100%
   margin: 0
   padding: 0
   position: relative
-  font-family: Helvetica, Arial, sans-serif
-  background: #f95c0f
-  color: #000
-  height: 100%
-  font-size: 80%
 
-#header
-#content
+// #header
+
+.content
   padding: 50px 0
+
   h1
-    position: fixed
-    margin-top: 150px
-    font-weight: bold
-    color: #000
+    color: $black
     font-size: 50px
+    font-weight: bold
     letter-spacing: -2px
+    margin-top: 150px
+    position: fixed
+
     .words
-      color: #fff
-      text-shadow: #ccc 0 0 1px
+      color: $white
       margin-bottom: 75px
+      text-shadow: $light-grey 0 0 1px
+
       .word
         margin-bottom: 10px
+
     .number
-      color: #000
+      color: $black
+
   .hidden
     visibility: hidden
+
   ol
+    list-style: none
     margin-bottom: 25px
     margin-right: 0
     position: relative
-    list-style: none
+
+    &.counter-reset-0
+      counter-reset: item 0
+
+    &.counter-reset-1
+      counter-reset: item 1
+
+    &.counter-reset-2
+      counter-reset: item 2
+
+    &.counter-reset-3
+      counter-reset: item 3
+
+    &.counter-reset-4
+      counter-reset: item 4
+
+    &.counter-reset-5
+      counter-reset: item 5
+
+    &.counter-reset-6
+      counter-reset: item 6
+
+    &.counter-reset-7
+      counter-reset: item 7
+
+    &.counter-reset-8
+      counter-reset: item 8
+
+    &.counter-reset-9
+      counter-reset: item 9
+
+    &.counter-reset-10
+      counter-reset: item 10
+
+    &.counter-reset-11
+      counter-reset: item 11
+
     li
-      border-top: 2px solid #000
-      margin-bottom: 10px
+      border-top: 2px solid $black
       counter-increment: item
-      &:before
+      margin-bottom: 10px
+
+      &::before
         content: counter(item)
         display: block
-        position: absolute
         left: -5px
         padding-top: 5px
+        position: absolute
+
       &.past
-        border-top-color: #bb450b
-        &:before
-          color: #bb450b
+        border-top-color: $burnt-orange
+
+        &::before
+          color: $burnt-orange
+
       dl
-        position: relative
-        padding-left: 70px
         line-height: 30px
+        padding-left: 70px
+        position: relative
+
         dt
+          border-bottom: 1px solid $black
+          left: 0
           position: absolute
           top: 0
-          left: 0
           width: 100%
-          border-bottom: 1px solid #000
+
           &.past
-            border-bottom-color: #bb450b
-            opacity: 0.25
-            color: #000
+            border-bottom-color: $burnt-orange
+            color: $black
+            opacity: .25
+
         dd
-          margin: 0
           display: inline-block
-          width: 25px
+          margin: 0
           padding: 0 5px
-          text-align: right
           position: relative
-          &.commercial-day-6, &.commercial-day-7
-            color: #fff
+          text-align: right
+          width: 25px
+
+          &.commercial-day-6,
+          &.commercial-day-7
+            color: $white
             font-weight: bold
+
             &.past
               font-weight: normal
+
           &.fifteen
             margin-right: 16px
+
           &.past
-            opacity: 0.25
-            color: #000
+            color: $black
+            opacity: .25
+
           &.current
             font-weight: bold
+
             &.past
               font-weight: normal
-            span.overlay
-              display: block
+
+            span
+              &.overlay
+                display: block
+
           &.future
             opacity: 1
-          span.overlay
-            position: absolute
-            top: -25px
-            right: -2px
-            width: 25px
-            padding: 0 5px
-            font-weight: bold
-            height: 100%
-            display: none
-            opacity: 1
-            font-size: 40px
-          &.row-2 span.overlay
-            top: auto
-            bottom: -20px !important
+
+          span
+            &.overlay
+              display: none
+              font-size: 40px
+              font-weight: bold
+              height: 100%
+              opacity: 1
+              padding: 0 5px
+              position: absolute
+              right: -2px
+              top: -25px
+              width: 25px
+
+          &.row-2
+            span
+              &.overlay
+                bottom: -20px !important
+                top: auto
+
   .navigation
-    padding-top: 10px
     font-size: 20px
+    padding-top: 10px
+
     .prev
       text-align: left
+
     .next
       text-align: right
+
     .content
-      text-align: center
       font-size: 12px
-      padding-top: 10px
       line-height: 20px
+      padding-top: 10px
+      text-align: center
+
     a
-      color: #000
+      border-bottom: 1px dotted $dark-grey
+      color: $black
       text-decoration: none
-      border-bottom: 1px dotted #333
-      &:hover, &:active, &:focus
-        border-bottom: 2px solid #000
-#footer
+
+      &:hover,
+      &:active,
+      &:focus
+        border-bottom: 2px solid $black
+
+footer
   display: none
-  text-align: center
   padding: 20px
+  text-align: center
