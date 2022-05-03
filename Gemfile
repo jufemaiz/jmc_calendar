@@ -9,7 +9,7 @@ source 'https://rubygems.org' do
   gem 'puma'
   gem 'rack'
   gem 'sass'
-  gem 'sinatra'
+  gem 'sinatra', '>= 2.2.0'
 
   group :development do
     gem 'rubocop'
