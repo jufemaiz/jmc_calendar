@@ -15,8 +15,6 @@ GEM
     linguistics (2.1.0)
       loggability (~> 0.11)
     loggability (0.14.0)
-    mustermann (1.1.1)
-      ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
     parallel (1.12.1)
     parser (2.5.3.0)
@@ -24,9 +22,7 @@ GEM
     powerpack (0.1.2)
     puma (5.6.4)
       nio4r (~> 2.0)
-    rack (2.2.3)
-    rack-protection (2.0.8.1)
-      rack
+    rack (3.0.0)
     rainbow (3.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -40,19 +36,15 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
-    ruby2_keywords (0.0.2)
     sass (3.7.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
-      tilt (~> 2.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     temple (0.8.0)
-    tilt (2.0.10)
+    tilt (2.0.11)
     unicode-display_width (1.4.0)
 
 PLATFORMS
@@ -63,7 +55,7 @@ DEPENDENCIES
   haml!
   linguistics!
   puma!
-  rack!
+  rack (>= 3.0.0)!
   rubocop!
   sass!
   sinatra!
