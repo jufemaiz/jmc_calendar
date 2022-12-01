@@ -63,7 +63,7 @@ DEPENDENCIES
   haml!
   linguistics!
   puma!
-  rack!
+  rack (>= 2.2.3.1)!
   rubocop!
   sass!
   sinatra (>= 2.2.3)!
