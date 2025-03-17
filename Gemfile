@@ -7,7 +7,7 @@ source 'https://rubygems.org' do
   gem 'haml'
   gem 'linguistics'
   gem 'puma'
-  gem 'rack', '>= 3.0.0'
+  gem 'rack', '>= 3.0.14'
   gem 'sass'
   gem 'sinatra', '>= 4.1.0'
 
