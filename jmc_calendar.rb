@@ -38,7 +38,7 @@ end
 # ----------------------------------
 # Year - calendar for a particular year
 # ----------------------------------
-get %r{\/(\d+)} do
+get %r{/(\d+)} do
   # TODO: use of GMT over server timezone; Localised timezone support
   params[:tz] ||= 0
   # /TODO

@@ -34,14 +34,14 @@
                 - # While this is the same month
                 %dd{class: " day #{'past' if day < @today } #{'current' if day == @today } #{'future' if day > @today } commercial-day-#{day.cwday} #{ 'fifteen' if day.day == 15 } #{'row-1' if day.day <= 15} #{'row-2' if day.day > 15}", title: day.strftime }
                   = day.strftime('%e')
-                  %span.overlay &middot;
+                  %span.overlay •
                 - day = day.next()
 
     .navigation
       .column.span-3
         .prev
           %a{ href: "/#{@year}"}
-            = "&larr; #{@year}"
+            = "« #{@year}"
       .coumn.span-12
         .content
           A collaboration between
@@ -52,4 +52,4 @@
       .column.span-3.last
         .next
           %a{ href: "/#{@year+1}"}
-            = "#{@year+1} &rarr;"
+            = "#{@year+1} »"
