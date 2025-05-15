@@ -7,9 +7,9 @@ source 'https://rubygems.org' do
   gem 'haml'
   gem 'linguistics'
   gem 'puma', '>= 5.6.9'
-  gem 'rack', '>= 3.0.0'
+  gem 'rack', '>= 3.0.16'
   gem 'sass'
-  gem 'sinatra', '>= 2.2.3'
+  gem 'sinatra', '>= 4.1.0'
 
   group :development do
     gem 'rubocop'
