@@ -9,5 +9,3 @@ preload_app!
 rackup Puma::Configuration::DEFAULTS[:rackup]
 port ENV['PORT'] || 3000
 environment ENV['RACK_ENV'] || 'development'
-
-on_worker_boot
