@@ -13,7 +13,7 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
-    json (2.15.1)
+    json (2.15.2.1)
     language_server-protocol (3.17.0.5)
     linguistics (2.1.0)
       loggability (~> 0.11)
